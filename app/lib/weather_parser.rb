@@ -1,6 +1,3 @@
-require 'forecast_io'
-require 'yaml'
-
 yaml = YAML.load_file(File.join(File.dirname(__FILE__), "../api.yml"))
 
 ForecastIO.configure do |configuration|
@@ -9,4 +6,5 @@ end
 
 
 forecast = ForecastIO.forecast(13.0839, 80.2700)
+
 
